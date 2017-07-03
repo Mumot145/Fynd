@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FileUploader" 
+             xmlns:mr="clr-namespace:MR.Gestures;assembly=MR.Gestures" 
+             xmlns:Controls="clr-namespace:SaveOn;assembly=SaveOn.CustomListView"
+             x:Class="SaveOn.XAML.ShoppingList">
+    <mr:ListView x:Name="absLayout" 
+              VerticalOptions="FillAndExpand"             
+              BackgroundColor="White" 
+                 
+              RowHeight="120"
+              IsPullToRefreshEnabled="True"
+              Refreshing="absLayout_Refreshing"
+              ItemsSource="{Binding couponList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <AbsoluteLayout>
+                            <mr:Image  
+                                    Source="{Binding thisCoupon.ImageStream}"                              
+                                    PanningCommand="{Binding thisCoupon.PanningCommand}"
+                                    PannedCommand="{Binding thisCoupon.PannedCommand}"
+                                    SwipedCommand="{Binding thisCoupon.SwipedCommand}"
+                                    TappedCommand="{Binding thisCoupon.TappedCommand}"
+                                    Swiped="Image_OnSwiped"
+                                    Tapped="couponTapped"
+                                    TranslationX="{Binding thisCoupon.TranslationX}"
+                                    AnchorX="{Binding thisCoupon.AnchorX}"
+		                            AnchorY="{Binding thisCoupon.AnchorY}"
+                                    Aspect="AspectFill"                                
+                                    AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"
+                                    AbsoluteLayout.LayoutFlags="All"/>
+                            <BoxView Opacity="0.15" Color="BlueViolet" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"
+                                    AbsoluteLayout.LayoutFlags="All"/>
+                            <StackLayout AbsoluteLayout.LayoutBounds="0.1,0.5, 1, 1" Orientation="Horizontal"
+                                         AbsoluteLayout.LayoutFlags="All">
+                           
+                            <mr:Image Source="marker.png"
+                                   HorizontalOptions="StartAndExpand"
+                                   TappedCommand="{Binding TappedCommand}"
+                                   VerticalOptions="Center"
+                                   Margin="15,0,0,0"/>
+                            <mr:Image Source="{Binding thisCoupon.TypeLink}" HorizontalOptions="EndAndExpand"
+                                      HeightRequest="25"
+                                      WidthRequest="25"
+                                     Margin="0,0,15,0"
+                                     VerticalOptions="Center"/>
+                            
+                        </StackLayout>
+                        <Label Text="{Binding thisCoupon.GoogleData.name}"
+                               AbsoluteLayout.LayoutBounds="0.5, 0.7, 0.5, 0.5"
+                               AbsoluteLayout.LayoutFlags="All"/>
+                        <!--<mr:Image Source="{Binding thisCoupon.TypeLink}"
+                               
+                                AbsoluteLayout.LayoutBounds="0.9, 0.5, 0.1, 0.1"                                
+                               
+                                VerticalOptions="Center"
+                                AbsoluteLayout.LayoutFlags="All"/>-->
+                        </AbsoluteLayout>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </mr:ListView>
+</ContentPage>

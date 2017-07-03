@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c7e5667b-d8bf-47cb-8fbd-63586786ab89</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SaveOn</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\BackpackView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Azure\AzureCouponManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Azure\AzureDataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Azure\AzureStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\InfiniteScroll.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContainerType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Convert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GoogleModels\GooglePlaces.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\GoogleService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GPS\GetGPS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\SocialMedia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CouponList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CouponSchedule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FacebookUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ShoppingListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TodoItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Coupon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CustomEventArgsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ObservableObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TextOnlyViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TransformViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\BackpackDisplay.xaml.cs">
+      <DependentUpon>BackpackDisplay.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\BackpackView.xaml.cs">
+      <DependentUpon>BackpackView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\FacebookLoginPage.xaml.cs">
+      <DependentUpon>FacebookLoginPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\FindPlacePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\ShoppingList.xaml.cs">
+      <DependentUpon>ShoppingList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\BackpackDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\FacebookLoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\ShoppingList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)facebook.png" />
+    <Content Include="$(MSBuildThisFileDirectory)XAML\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\FindPlacePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

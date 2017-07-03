@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="SaveOn.XAML.StartPage">
+
+
+        <StackLayout>
+
+        <controls:ImageButton x:Name="FacebookButton"
+                                  BackgroundColor="#3d509f"
+                                  HeightRequest="75"
+                                  ImageHeightRequest="50"
+                                  ImageWidthRequest="50"
+                                  Orientation="ImageToRight"
+                                  Text="Facebook"
+                                  TextColor="#ffffff"
+                                  WidthRequest="175">
+
+        </controls:ImageButton>
+        <!--
+            <controls:IconButton Text="Twitter + Font Awesome" BackgroundColor="#01abdf" TextColor="#ffffff"
+                                 Orientation="ImageToLeft" Icon="{x:Static icons:Icons.Twitter}" IconColor="#ffffff"
+                                 IconSize="25" />
+            <controls:IconButton Text="Facebook + Font Awesome" BackgroundColor="#3d509f" TextColor="#ffffff"
+                                 Orientation="ImageToRight" Icon="{x:Static icons:Icons.FacebookSquare}"
+                                 IconColor="#ffffff" IconSize="25" />-->
+        </StackLayout>
+
+
+</ContentPage>

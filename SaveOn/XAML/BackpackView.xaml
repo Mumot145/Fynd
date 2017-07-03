@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaveOn.XAML.BackpackView"
+             Title="Backpack">
+    <Grid RowSpacing="10" ColumnSpacing="10" Padding="20">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Button Grid.Row="0" Grid.Column="0" Text="Food" Clicked="Food_Selected"/>
+      <Button Grid.Row="0" Grid.Column="1" Text="Apparal" Clicked="Apparal_Selected"/>
+      <Button Grid.Row="0" Grid.Column="2" Text="Shoes" Clicked="Shoes_Selected"/>
+      <Button Grid.Row="1" Grid.Column="0" Text="Electronics" Clicked="Electronics_Selected"/>
+      <Button Grid.Row="1" Grid.Column="1" Text="Health and Wellness" Clicked="HandW_Selected"/>
+      <Button Grid.Row="1" Grid.Column="2" Text="Fitness"  Clicked="Fitness_Selected"/>
+      <Button Grid.Row="2" Grid.Column="0" Text="0"/>
+      <Button Grid.Row="2" Grid.Column="1" Text="0"/>
+      <Button Grid.Row="2" Grid.Column="2" Text="0"/>
+    </Grid>
+</ContentPage>
